@@ -55,7 +55,7 @@
           <h1 class="main-header-section">
             Effective Solutions for Your Business
           </h1>
-          <button class="button-header-section" type="button">
+          <button class="button-header-section" type="button" data-modal-open>
             Order Service
           </button>
         </div>
@@ -471,9 +471,9 @@
       </div>
     </footer>
 
-    <div class="modal-backdrop">
+    <div class="modal-backdrop is-open" data-modal>
       <div class="modal">
-        <button class="modal-close-btn" type="button">
+        <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-close-icon" width="24px" height="24px">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -484,35 +484,50 @@
         <form class="contact-form">
           <div class="contact-form-field-wrapper">
             <label class="contact-form-label" for="user-name">Name</label>
-            <input
-              class="contact-form-input"
-              id="user-name"
-              name="user-name"
-              type="text"
-              required
-            />
+            <div class="contact-form-input-wrapper">
+              <input
+                class="contact-form-input"
+                id="user-name"
+                name="user-name"
+                type="text"
+                required
+              />
+              <svg class="contact-form-input-icon" width="18px" height="24px">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
           </div>
           <div class="contact-form-field-wrapper">
             <label class="contact-form-label" for="user-tel">Phone</label>
-            <input
-              class="contact-form-input"
-              id="user-tel"
-              name="user-tel"
-              type="tel"
-              required
-            />
+            <div class="contact-form-input-wrapper">
+              <input
+                class="contact-form-input"
+                id="user-tel"
+                name="user-tel"
+                type="tel"
+                required
+              />
+              <svg class="contact-form-input-icon" width="18px" height="24px">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
           </div>
           <div class="contact-form-field-wrapper">
             <label class="contact-form-label" for="user-email">Email</label>
-            <input
-              class="contact-form-input"
-              id="user-email"
-              name="user-email"
-              type="email"
-              required
-            />
+            <div class="contact-form-input-wrapper">
+              <input
+                class="contact-form-input"
+                id="user-email"
+                name="user-email"
+                type="email"
+                required
+              />
+              <svg class="contact-form-input-icon" width="18px" height="24px">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
           </div>
-          <div class="contact-form-field-wrapper">
+          <div class="contact-form-field-wrapper text-area-modal">
             <label class="contact-form-label" for="user-comment">Comment</label>
             <textarea
               class="contact-form-comment"
@@ -525,7 +540,7 @@
           </div>
           <div class="contact-form-checkbox-wrapper">
             <input
-              class="contact-form-checkbox"
+              class="contact-form-checkbox visually-hidden"
               id="privacy-policy"
               name="privacy-policy"
               type="checkbox"
@@ -533,6 +548,11 @@
               required
             />
             <label class="contact-form-checkbox-label" for="privacy-policy">
+              <span class="contact-form-custom-checkbox">
+                <svg class="contact-form-custom-icon" width="10px" height="8px">
+                  <use href="./images/icons.svg#icon-chckd"></use>
+                </svg>
+              </span>
               I accept the terms and conditions of the
               <a class="contact-form-policy-link" href="">Privacy Policy</a>
             </label>
@@ -541,5 +561,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
